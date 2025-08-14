@@ -5,12 +5,14 @@ description = "A package for doing great things!"
 authors = ["Rohan Yadav"]
 license = "None"
 readme = "README.md"
+packages = [
+    { include = "my_krml_24669044", from = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.11.4"
 pandas = "2.2.2"
 scikit-learn = "1.5.1"
-
 
 [tool.poetry.group.dev.dependencies]
 pytest = "8.2.2"
