@@ -42,3 +42,20 @@ def drop_duplicates(df: pd.DataFrame, subset=None, keep='first'):
         DataFrame without duplicates.
     """
     return df.drop_duplicates(subset=subset, keep=keep).reset_index(drop=True)
+    
+
+def drop_rows_with_missing(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Remove any rows that contain one or more missing (NaN/None) values.
+
+    Parameters
+    ----------
+    df : DataFrame
+        Input pandas DataFrame.
+
+    Returns
+    -------
+    DataFrame
+        Copy of the DataFrame with rows containing missing values removed.
+    """
+    return df.dropna()
